@@ -1,0 +1,2 @@
+# thesis
+diplomová práca
