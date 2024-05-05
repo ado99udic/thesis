@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVRP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .logo {
+            float: left;
+        }
+        .heading {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 36px;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="your-company-logo.png" alt="Logo firmy" class="logo">
+    <h1>Názov firmy</h1>
+</div>
+
+<div class="heading">
+    <h2>Systém na zistenie dodávok tovaru</h2>
+</div>
+
+<div class="button-container">
+    <button id="calculateRoutes" class="button">Vypočítaj trasy</button>
+</div>
+
+<div id="output"></div>
+
+<script>
+document.getElementById('calculateRoutes').addEventListener('click', function() {
+    fetch('/', {
+        method: 'POST',
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('output').innerHTML = data;
+    });
+});
+</script>
+
+</body>
+</html>
